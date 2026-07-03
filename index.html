@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>M. Jeeva — Full Stack Java Developer</title>
+<meta name="description" content="M. Jeeva — Full Stack Java Developer building scalable web applications with Java, Spring Boot, React and Python.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Loading Screen -->
+<div id="loader">
+  <div class="loader-inner">
+    <div class="loader-ring"></div>
+    <span class="loader-text">M.J</span>
+  </div>
+</div>
+
+<!-- Custom cursor -->
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- Scroll progress -->
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- NAV -->
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#home" class="nav-brand">M<span class="dot">.</span>Jeeva</a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#certifications">Certs</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <a href="assets/Jeeva_Resume.pdf" download class="btn btn-ghost nav-resume">Resume</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <div class="nav-mobile" id="navMobile">
+    <a href="#about">About</a>
+    <a href="#education">Education</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#experience">Experience</a>
+    <a href="#certifications">Certifications</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+    <a href="assets/Jeeva_Resume.pdf" download class="btn btn-primary">Download Resume</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-bg">
+    <div class="aurora aurora-1"></div>
+    <div class="aurora aurora-2"></div>
+    <div class="aurora aurora-3"></div>
+    <div class="grid-overlay"></div>
+    <canvas id="particles"></canvas>
+  </div>
+
+  <div class="hero-inner">
+    <p class="eyebrow reveal">Tamil Nadu, India · Open to opportunities</p>
+    <h1 class="hero-title">
+      <span class="reveal">Hello, I'm</span>
+      <span class="hero-name reveal">M. Jeeva</span>
+    </h1>
+    <div class="hero-role reveal">
+      <span id="typedRole"></span><span class="type-cursor">|</span>
+    </div>
+    <p class="hero-desc reveal">
+      Building scalable web applications with Java, Spring Boot, React, Python and modern
+      web technologies — I turn real-world problems into clean, working software.
+    </p>
+
+    <div class="hero-actions reveal">
+      <a href="#projects" class="btn btn-primary magnetic">View Projects</a>
+      <a href="assets/Jeeva_Resume.pdf" download class="btn btn-outline magnetic">Download Resume</a>
+      <a href="#contact" class="btn btn-outline magnetic">Contact Me</a>
+    </div>
+
+    <div class="hero-socials reveal">
+      <a href="https://github.com/JEEVA424" target="_blank" rel="noopener" aria-label="GitHub" class="social-icon magnetic">
+        <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.57.1.78-.25.78-.55v-2.15c-3.2.7-3.87-1.35-3.87-1.35-.53-1.34-1.29-1.7-1.29-1.7-1.06-.72.08-.71.08-.71 1.17.08 1.78 1.2 1.78 1.2 1.04 1.78 2.72 1.27 3.38.97.1-.75.4-1.27.73-1.56-2.55-.29-5.23-1.28-5.23-5.68 0-1.26.45-2.28 1.19-3.08-.12-.29-.52-1.46.11-3.04 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.79 0c2.2-1.49 3.18-1.18 3.18-1.18.63 1.58.23 2.75.11 3.04.74.8 1.18 1.82 1.18 3.08 0 4.41-2.69 5.38-5.25 5.67.41.36.78 1.06.78 2.14v3.17c0 .3.21.66.79.55A10.51 10.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
+      </a>
+      <a href="https://www.linkedin.com/in/jeeva-m-b4721a377" target="_blank" rel="noopener" aria-label="LinkedIn" class="social-icon magnetic">
+        <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM.5 8.98h8.9V23.5H.5V8.98zM15.4 8.98h-8.53v14.52h8.53v-7.4c0-1.95.37-3.84 2.78-3.84 2.39 0 2.42 2.23 2.42 3.96v7.28H29V15.6c0-5.36-1.14-9.48-7.42-9.48-3.01 0-5.03 1.65-5.86 3.22h-.08V8.98H15.4z" transform="translate(-.5)"/></svg>
+      </a>
+      <a href="https://www.instagram.com/_.freaky_jeeva._" target="_blank" rel="noopener" aria-label="Instagram" class="social-icon magnetic">
+        <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23a3.8 3.8 0 0 1-.9 1.38 3.8 3.8 0 0 1-1.38.9c-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.8 3.8 0 0 1-1.38-.9 3.8 3.8 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41 1.27-.06 1.65-.07 4.85-.07zM12 0C8.74 0 8.33.01 7.05.07c-1.28.06-2.15.26-2.91.56a5.97 5.97 0 0 0-2.16 1.4A5.97 5.97 0 0 0 .58 4.19c-.3.76-.5 1.63-.56 2.91C.01 8.38 0 8.79 0 12.05s.01 3.67.07 4.95c.06 1.28.26 2.15.56 2.91.31.79.72 1.46 1.4 2.13.67.67 1.34 1.09 2.13 1.4.76.3 1.63.5 2.91.56 1.28.06 1.69.07 4.95.07s3.67-.01 4.95-.07c1.28-.06 2.15-.26 2.91-.56a5.97 5.97 0 0 0 2.13-1.4 5.97 5.97 0 0 0 1.4-2.13c.3-.76.5-1.63.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.28-.26-2.15-.56-2.91a5.97 5.97 0 0 0-1.4-2.13A5.97 5.97 0 0 0 19.82.63c-.76-.3-1.63-.5-2.91-.56C15.63.01 15.22 0 11.96 0zm0 5.84A6.16 6.16 0 1 0 12 18.16 6.16 6.16 0 0 0 12 5.84zm0 10.16A4 4 0 1 1 12 8a4 4 0 0 1 0 8zm7.85-10.4a1.44 1.44 0 1 1-2.88 0 1.44 1.44 0 0 1 2.88 0z"/></svg>
+      </a>
+      <a href="mailto:jeeva424435@gmail.com" aria-label="Email" class="social-icon magnetic">
+        <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M2 4h20a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1zm18.35 2H3.65L12 12.5 20.35 6zM3 7.7V18h18V7.7l-8.6 6.6a1 1 0 0 1-1.2 0L3 7.7z"/></svg>
+      </a>
+    </div>
+  </div>
+
+  <div class="hero-orbit reveal">
+    <div class="orbit-ring orbit-ring-1"></div>
+    <div class="orbit-ring orbit-ring-2"></div>
+    <div class="tech-chip chip-java" style="--angle:0deg">Java</div>
+    <div class="tech-chip chip-spring" style="--angle:45deg">Spring Boot</div>
+    <div class="tech-chip chip-react" style="--angle:90deg">React</div>
+    <div class="tech-chip chip-python" style="--angle:135deg">Python</div>
+    <div class="tech-chip chip-mysql" style="--angle:180deg">MySQL</div>
+    <div class="tech-chip chip-git" style="--angle:225deg">Git</div>
+    <div class="tech-chip chip-docker" style="--angle:270deg">Docker</div>
+    <div class="tech-chip chip-vscode" style="--angle:315deg">VS Code</div>
+    <div class="hero-code-card">
+      <div class="code-dots"><span></span><span></span><span></span></div>
+      <pre><code><span class="tok-kw">public class</span> <span class="tok-cl">Developer</span> {
+  <span class="tok-kw">private</span> String name = <span class="tok-str">"M. Jeeva"</span>;
+  <span class="tok-kw">private</span> String[] stack = {
+    <span class="tok-str">"Java"</span>, <span class="tok-str">"Spring Boot"</span>,
+    <span class="tok-str">"React"</span>, <span class="tok-str">"Python"</span>
+  };
+
+  <span class="tok-kw">public void</span> <span class="tok-fn">buildSomethingGreat</span>() {
+    <span class="tok-kw">while</span> (<span class="tok-kw">true</span>) learn();
+  }
+}</code></pre>
+    </div>
+  </div>
+
+  <a href="#about" class="scroll-cue">
+    <span>Scroll</span>
+    <div class="scroll-cue-line"></div>
+  </a>
+</section>
+
+<main>
+
+<!-- ABOUT -->
+<section class="section" id="about">
+  <div class="section-inner about-grid">
+    <div class="about-photo-wrap reveal">
+      <div class="about-photo-glow"></div>
+      <div class="about-photo-frame">
+        <img src="assets/profile.jpg" alt="M. Jeeva" class="about-photo" loading="lazy">
+      </div>
+      <div class="about-photo-badge">
+        <span class="badge-dot"></span> Available for opportunities
+      </div>
+    </div>
+
+    <div class="about-copy">
+      <p class="eyebrow reveal">About Me</p>
+      <h2 class="section-title reveal">Turning ideas into <span class="grad-text">working software.</span></h2>
+      <p class="reveal about-text">
+        I'm an enthusiastic Information Technology student passionate about software
+        engineering, backend development, Java, Spring Boot, Python and modern web
+        technologies. I enjoy solving real-world problems by building scalable
+        applications and continuously learning new tools.
+      </p>
+      <p class="reveal about-text">
+        Currently seeking opportunities to contribute, learn and grow as a professional
+        software developer — with a strong foundation in DSA, OOP, DBMS and operating
+        systems built through coursework and hands-on internships.
+      </p>
+
+      <div class="about-facts reveal">
+        <div class="fact">
+          <span class="fact-label">Location</span>
+          <span class="fact-value">Tamil Nadu, India</span>
+        </div>
+        <div class="fact">
+          <span class="fact-label">Email</span>
+          <a href="mailto:jeeva424435@gmail.com" class="fact-value">jeeva424435@gmail.com</a>
+        </div>
+        <div class="fact">
+          <span class="fact-label">Phone</span>
+          <a href="tel:+919840586176" class="fact-value">+91 98405 86176</a>
+        </div>
+        <div class="fact">
+          <span class="fact-label">Focus</span>
+          <span class="fact-value">Full Stack Java Development</span>
+        </div>
+      </div>
+
+      <a href="assets/Jeeva_Resume.pdf" download class="btn btn-primary reveal">Download Resume</a>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats-strip reveal">
+  <div class="section-inner stats-grid">
+    <div class="stat"><span class="stat-num" data-count="4">0</span><span class="stat-label">Projects Built</span></div>
+    <div class="stat"><span class="stat-num" data-count="12">0</span><span class="stat-label">Technologies</span></div>
+    <div class="stat"><span class="stat-num" data-count="500" data-suffix="+">0</span><span class="stat-label">Coding Hours</span></div>
+    <div class="stat"><span class="stat-num" data-count="4">0</span><span class="stat-label">Certifications</span></div>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section class="section" id="education">
+  <div class="section-inner">
+    <p class="eyebrow reveal">Education</p>
+    <h2 class="section-title reveal">Academic <span class="grad-text">Journey.</span></h2>
+
+    <div class="timeline">
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <span class="timeline-date">2024 — 2028</span>
+          <h3>B.Tech, Information Technology</h3>
+          <p>V.S.B Engineering College, Karur</p>
+          <span class="pill pill-accent">CGPA 8.4 / 10</span>
+        </div>
+      </div>
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <span class="timeline-date">2024</span>
+          <h3>Class XII</h3>
+          <p>Kabilar Govt. Boys Hr. Sec. School</p>
+          <span class="pill">470 / 600</span>
+        </div>
+      </div>
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <span class="timeline-date">2022</span>
+          <h3>Class X</h3>
+          <p>Government High School, Mudhalur</p>
+          <span class="pill">424 / 500</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section class="section" id="skills">
+  <div class="section-inner">
+    <p class="eyebrow reveal">Skills &amp; Tech Stack</p>
+    <h2 class="section-title reveal">Tools I build <span class="grad-text">with.</span></h2>
+
+    <div class="skills-grid">
+      <div class="skill-card reveal">
+        <h3>Programming</h3>
+        <div class="bars">
+          <div class="bar"><span>Java</span><i style="--w:90%"></i></div>
+          <div class="bar"><span>Python</span><i style="--w:80%"></i></div>
+          <div class="bar"><span>JavaScript</span><i style="--w:78%"></i></div>
+        </div>
+      </div>
+      <div class="skill-card reveal">
+        <h3>Frontend</h3>
+        <div class="bars">
+          <div class="bar"><span>React / Next.js</span><i style="--w:82%"></i></div>
+          <div class="bar"><span>HTML / CSS</span><i style="--w:90%"></i></div>
+          <div class="bar"><span>Tailwind / Bootstrap</span><i style="--w:85%"></i></div>
+        </div>
+      </div>
+      <div class="skill-card reveal">
+        <h3>Backend</h3>
+        <div class="bars">
+          <div class="bar"><span>Spring Boot</span><i style="--w:85%"></i></div>
+          <div class="bar"><span>REST APIs</span><i style="--w:88%"></i></div>
+          <div class="bar"><span>Hibernate / JPA</span><i style="--w:75%"></i></div>
+        </div>
+      </div>
+      <div class="skill-card reveal">
+        <h3>Database</h3>
+        <div class="bars">
+          <div class="bar"><span>MySQL</span><i style="--w:85%"></i></div>
+          <div class="bar"><span>PostgreSQL</span><i style="--w:70%"></i></div>
+          <div class="bar"><span>MongoDB</span><i style="--w:45%"></i></div>
+        </div>
+      </div>
+      <div class="skill-card reveal">
+        <h3>Tools</h3>
+        <div class="chip-list">
+          <span class="chip">Git</span><span class="chip">GitHub</span><span class="chip">VS Code</span>
+          <span class="chip">IntelliJ IDEA</span><span class="chip">Postman</span><span class="chip">Maven</span><span class="chip">Vercel</span>
+        </div>
+      </div>
+      <div class="skill-card reveal">
+        <h3>Soft Skills</h3>
+        <div class="chip-list">
+          <span class="chip">Problem Solving</span><span class="chip">Leadership</span><span class="chip">Communication</span>
+          <span class="chip">Critical Thinking</span><span class="chip">Time Management</span><span class="chip">Teamwork</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section class="section" id="projects">
+  <div class="section-inner">
+    <p class="eyebrow reveal">Featured Work</p>
+    <h2 class="section-title reveal">Projects I've <span class="grad-text">shipped.</span></h2>
+
+    <div class="projects-grid">
+      <article class="project-card reveal">
+        <div class="project-visual pv-1"><span>Parallel Processing</span></div>
+        <div class="project-body">
+          <h3>Python Parallel Text Processing System</h3>
+          <p>A high-performance parallel text processing application built to handle large datasets efficiently using concurrent execution.</p>
+          <ul class="project-features">
+            <li>Multithreaded pipeline with ThreadPoolExecutor</li>
+            <li>Optimized throughput on large text corpora</li>
+            <li>Benchmarked performance gains vs. sequential processing</li>
+          </ul>
+          <div class="chip-list">
+            <span class="chip">Python</span><span class="chip">ThreadPoolExecutor</span><span class="chip">Multithreading</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card reveal">
+        <div class="project-visual pv-2"><span>Portfolio</span></div>
+        <div class="project-body">
+          <h3>Personal Portfolio Website</h3>
+          <p>A premium, responsive portfolio showcasing skills, certifications and projects — designed and built end to end.</p>
+          <ul class="project-features">
+            <li>Fully responsive, SEO-optimized layout</li>
+            <li>Dark, modern UI with motion design</li>
+            <li>Component-driven, production-ready build</li>
+          </ul>
+          <div class="chip-list">
+            <span class="chip">Next.js</span><span class="chip">React</span><span class="chip">Tailwind CSS</span><span class="chip">TypeScript</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card reveal">
+        <div class="project-visual pv-3"><span>Task Manager</span></div>
+        <div class="project-body">
+          <h3>Task Management Application</h3>
+          <p>A full-stack task management system with authentication and a real-time dashboard for organizing daily work.</p>
+          <ul class="project-features">
+            <li>Full CRUD with search and filtering</li>
+            <li>Secure authentication and user sessions</li>
+            <li>REST API backend with a live dashboard</li>
+          </ul>
+          <div class="chip-list">
+            <span class="chip">Java</span><span class="chip">Spring Boot</span><span class="chip">React</span><span class="chip">MySQL</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card reveal">
+        <div class="project-visual pv-4"><span>Calculator</span></div>
+        <div class="project-body">
+          <h3>Java Calculator Application</h3>
+          <p>A desktop calculator application built in Java, focused on clean OOP design and accurate operation handling.</p>
+          <ul class="project-features">
+            <li>Object-oriented architecture</li>
+            <li>Handles complex expressions and edge cases</li>
+            <li>Simple, intuitive interface</li>
+          </ul>
+          <div class="chip-list">
+            <span class="chip">Java</span><span class="chip">OOP</span><span class="chip">Swing</span>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section class="section" id="experience">
+  <div class="section-inner">
+    <p class="eyebrow reveal">Experience</p>
+    <h2 class="section-title reveal">Internships &amp; <span class="grad-text">practical learning.</span></h2>
+
+    <div class="timeline">
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <span class="timeline-date">Full Stack Development Intern</span>
+          <h3>Thiranex</h3>
+          <p>Contributed to full stack development tasks, applying front-end and back-end skills on real project work.</p>
+        </div>
+      </div>
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <span class="timeline-date">Virtual Internship 6.0</span>
+          <h3>Infosys Springboard</h3>
+          <p>Covered software development fundamentals, programming practices and project-based learning aligned with industry standards.</p>
+          <div class="chip-list">
+            <span class="chip">Software Development</span><span class="chip">Programming Fundamentals</span><span class="chip">Industry Practices</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section class="section" id="certifications">
+  <div class="section-inner">
+    <p class="eyebrow reveal">Certifications</p>
+    <h2 class="section-title reveal">Verified <span class="grad-text">learning.</span></h2>
+
+    <div class="cert-grid">
+      <div class="cert-card reveal">
+        <div class="cert-icon">☕</div>
+        <h3>Java Programming</h3>
+        <p>GUVI HCL</p>
+      </div>
+      <div class="cert-card reveal">
+        <div class="cert-icon">🐍</div>
+        <h3>Basics of Python</h3>
+        <p>Infosys Springboard</p>
+      </div>
+      <div class="cert-card reveal">
+        <div class="cert-icon">🎓</div>
+        <h3>Virtual Internship 6.0</h3>
+        <p>Infosys Springboard</p>
+      </div>
+      <div class="cert-card reveal">
+        <div class="cert-icon">🧩</div>
+        <h3>Full Stack Development</h3>
+        <p>Thiranex Internship</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="section" id="services">
+  <div class="section-inner">
+    <p class="eyebrow reveal">Services</p>
+    <h2 class="section-title reveal">What I can <span class="grad-text">build for you.</span></h2>
+
+    <div class="services-grid">
+      <div class="service-card reveal">
+        <div class="service-num">01</div>
+        <h3>Full Stack Development</h3>
+        <p>End-to-end web applications, from database design to a polished, working UI.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-num">02</div>
+        <h3>Java Backend Development</h3>
+        <p>Reliable, well-structured backend systems built with Java and Spring Boot.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-num">03</div>
+        <h3>REST API Development</h3>
+        <p>Clean, documented APIs that are easy to integrate and simple to maintain.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-num">04</div>
+        <h3>Spring Boot Applications</h3>
+        <p>Production-ready Spring Boot services with a focus on structure and performance.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-num">05</div>
+        <h3>Portfolio Websites</h3>
+        <p>Premium, recruiter-ready personal sites that make a strong first impression.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-num">06</div>
+        <h3>Responsive Web Design</h3>
+        <p>Interfaces that look and feel right on every screen, from mobile to desktop.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section" id="contact">
+  <div class="section-inner contact-grid">
+    <div class="contact-copy">
+      <p class="eyebrow reveal">Get In Touch</p>
+      <h2 class="section-title reveal">Let's build something <span class="grad-text">great together.</span></h2>
+      <p class="reveal about-text">
+        Open to Software Developer roles, internships and collaborations. Reach out —
+        I usually reply within a day.
+      </p>
+
+      <div class="contact-list reveal">
+        <a href="mailto:jeeva424435@gmail.com" class="contact-row">
+          <span class="contact-icon">✉</span>
+          <div><span class="fact-label">Email</span><span class="fact-value">jeeva424435@gmail.com</span></div>
+        </a>
+        <a href="tel:+919840586176" class="contact-row">
+          <span class="contact-icon">📞</span>
+          <div><span class="fact-label">Phone</span><span class="fact-value">+91 98405 86176</span></div>
+        </a>
+        <div class="contact-row">
+          <span class="contact-icon">📍</span>
+          <div><span class="fact-label">Location</span><span class="fact-value">Tamil Nadu, India</span></div>
+        </div>
+      </div>
+
+      <div class="hero-socials reveal" style="margin-top:2rem;">
+        <a href="https://github.com/JEEVA424" target="_blank" rel="noopener" class="social-icon magnetic" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.57.1.78-.25.78-.55v-2.15c-3.2.7-3.87-1.35-3.87-1.35-.53-1.34-1.29-1.7-1.29-1.7-1.06-.72.08-.71.08-.71 1.17.08 1.78 1.2 1.78 1.2 1.04 1.78 2.72 1.27 3.38.97.1-.75.4-1.27.73-1.56-2.55-.29-5.23-1.28-5.23-5.68 0-1.26.45-2.28 1.19-3.08-.12-.29-.52-1.46.11-3.04 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.79 0c2.2-1.49 3.18-1.18 3.18-1.18.63 1.58.23 2.75.11 3.04.74.8 1.18 1.82 1.18 3.08 0 4.41-2.69 5.38-5.25 5.67.41.36.78 1.06.78 2.14v3.17c0 .3.21.66.79.55A10.51 10.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/jeeva-m-b4721a377" target="_blank" rel="noopener" class="social-icon magnetic" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM.5 8.98h8.9V23.5H.5V8.98zM15.4 8.98h-8.53v14.52h8.53v-7.4c0-1.95.37-3.84 2.78-3.84 2.39 0 2.42 2.23 2.42 3.96v7.28H29V15.6c0-5.36-1.14-9.48-7.42-9.48-3.01 0-5.03 1.65-5.86 3.22h-.08V8.98H15.4z" transform="translate(-.5)"/></svg>
+        </a>
+        <a href="https://www.instagram.com/_.freaky_jeeva._" target="_blank" rel="noopener" class="social-icon magnetic" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23a3.8 3.8 0 0 1-.9 1.38 3.8 3.8 0 0 1-1.38.9c-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.8 3.8 0 0 1-1.38-.9 3.8 3.8 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41 1.27-.06 1.65-.07 4.85-.07zM12 0C8.74 0 8.33.01 7.05.07c-1.28.06-2.15.26-2.91.56a5.97 5.97 0 0 0-2.16 1.4A5.97 5.97 0 0 0 .58 4.19c-.3.76-.5 1.63-.56 2.91C.01 8.38 0 8.79 0 12.05s.01 3.67.07 4.95c.06 1.28.26 2.15.56 2.91.31.79.72 1.46 1.4 2.13.67.67 1.34 1.09 2.13 1.4.76.3 1.63.5 2.91.56 1.28.06 1.69.07 4.95.07s3.67-.01 4.95-.07c1.28-.06 2.15-.26 2.91-.56a5.97 5.97 0 0 0 2.13-1.4 5.97 5.97 0 0 0 1.4-2.13c.3-.76.5-1.63.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.28-.26-2.15-.56-2.91a5.97 5.97 0 0 0-1.4-2.13A5.97 5.97 0 0 0 19.82.63c-.76-.3-1.63-.5-2.91-.56C15.63.01 15.22 0 11.96 0zm0 5.84A6.16 6.16 0 1 0 12 18.16 6.16 6.16 0 0 0 12 5.84zm0 10.16A4 4 0 1 1 12 8a4 4 0 0 1 0 8zm7.85-10.4a1.44 1.44 0 1 1-2.88 0 1.44 1.44 0 0 1 2.88 0z"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <form class="contact-form reveal" id="contactForm">
+      <div class="form-row">
+        <label>Name</label>
+        <input type="text" name="name" placeholder="Your name" required>
+      </div>
+      <div class="form-row">
+        <label>Email</label>
+        <input type="email" name="email" placeholder="you@example.com" required>
+      </div>
+      <div class="form-row">
+        <label>Message</label>
+        <textarea name="message" rows="5" placeholder="Tell me about your project or opportunity..." required></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary form-submit">Send Message</button>
+      <p class="form-note" id="formNote"></p>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="section-inner footer-grid">
+    <div>
+      <a href="#home" class="nav-brand">M<span class="dot">.</span>Jeeva</a>
+      <p class="footer-tag">Full Stack Java Developer building scalable, thoughtful software.</p>
+    </div>
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="footer-links">
+      <h4>Connect</h4>
+      <a href="https://github.com/JEEVA424" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.linkedin.com/in/jeeva-m-b4721a377" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.instagram.com/_.freaky_jeeva._" target="_blank" rel="noopener">Instagram</a>
+      <a href="assets/Jeeva_Resume.pdf" download>Download Resume</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© <span id="year"></span> M. Jeeva. All rights reserved.</span>
+    <span>Designed &amp; Developed by M. Jeeva</span>
+  </div>
+</footer>
+
+<script src="script.js" defer></script>
+</body>
+</html>
